@@ -9,6 +9,9 @@ export default class MovieList extends Component {
 
         }
     }
+    componentWillUnmount(){
+        console.log('I am unmount')
+    }
     render() {
         
         let listOfMoviesDisplayed='';

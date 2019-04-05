@@ -11,6 +11,8 @@ import React, { Component } from 'react';
 // import Product from './Product'
 import Search from './Search'
 import MovieList from './movies/MovieList';
+import Toggler from './Toggler';
+import Register from './Register/Register.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class App extends Component {
     this.state={
      
       searchQuery:""
+     
     };
     this.handleSearchClick=this.handleSearchClick.bind(this)
    this.handleChange=this.handleChange.bind(this)
@@ -38,14 +41,15 @@ class App extends Component {
 
     return (
       <div className="container">
+      <Register/>
       
 {/* 
         <h1 className="deepika"> Hello React js</h1> */}
-        <h4> Movies Ticket Booking</h4>
+        {/* <h4> Movies Ticket Booking</h4> */}
         
         
-        <Search  Search={this.handleSearchClick} SearchText={this.handleChange}/>
-        <label className="badge">{this.state.counter}</label>
+        {/* <Search  Search={this.handleSearchClick} SearchText={this.handleChange}/>
+        <label className="badge">{this.state.counter}</label> */}
        {/* <label className="badge">{this.state.counter}</label>
 
        
@@ -57,7 +61,8 @@ class App extends Component {
         <Add mybutton="AddButton"></Add>
         <Remove remove="Remove"></Remove>
         <Product/> */}
-        <MovieList  search={this.state.searchQuery}/>
+        {/* <MovieList  search={this.state.searchQuery}/>
+        <Toggler/> */}
       </div>
 
     );
